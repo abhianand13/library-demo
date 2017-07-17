@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="bbcd18df-876a-4889-b822-d0c0be50ab13" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8733/Design_Time_Addresses/LibraryDemo.Service/Service1/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="d7b06b34-caf2-4f5a-9457-c9435927e822" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/LibraryDemo.Service/Service1/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="a2d64e11-4b5a-49b2-8da6-08fd8b116f90" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/LibraryDemo.Service/Service1/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="20adf19a-8bd4-4a57-bcc0-739b02513b02" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/LibraryDemo.Service/Service1/mex" />
+    <MetadataFile FileName="LibraryDemo.DTO.xsd" MetadataType="Schema" ID="4c241573-d941-4abe-a7cc-4e5616cb2280" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/LibraryDemo.Service/Service1/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
