@@ -104,7 +104,7 @@
     <None Include="Connected Services\LibraryService\LibraryDemo.DTO.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\LibraryService\LibraryDemo.LibraryService.TransactionType.datasource">
+    <None Include="Connected Services\LibraryService\LibraryDemo.LibraryService.TransactionTypeDTO.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\LibraryService\service.wsdl" />

@@ -12,6 +12,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryDemo.DTO", "LibraryD
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryDemo.Service", "LibraryDemo.Service\LibraryDemo.Service.csproj", "{13BD10C6-8EA9-4250-B54A-4A81D0037F93}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryDemo.DAO", "LIbraryDemo.DAO\LibraryDemo.DAO.csproj", "{921A16AA-5248-45AF-8179-AB5EF8432C15}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,6 +32,10 @@ Global
 		{13BD10C6-8EA9-4250-B54A-4A81D0037F93}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{13BD10C6-8EA9-4250-B54A-4A81D0037F93}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{13BD10C6-8EA9-4250-B54A-4A81D0037F93}.Release|Any CPU.Build.0 = Release|Any CPU
+		{921A16AA-5248-45AF-8179-AB5EF8432C15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{921A16AA-5248-45AF-8179-AB5EF8432C15}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{921A16AA-5248-45AF-8179-AB5EF8432C15}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{921A16AA-5248-45AF-8179-AB5EF8432C15}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -15,9 +15,9 @@ namespace LibraryDemo.LibraryService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="TransactionType", Namespace="http://schemas.datacontract.org/2004/07/LibraryDemo.DTO")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="TransactionTypeDTO", Namespace="http://schemas.datacontract.org/2004/07/LibraryDemo.DTO")]
     [System.SerializableAttribute()]
-    public partial class TransactionType : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+    public partial class TransactionTypeDTO : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
         [System.NonSerializedAttribute()]
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
@@ -79,10 +79,10 @@ namespace LibraryDemo.LibraryService {
     public interface ILibraryService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ILibraryService/GetTransactionTypes", ReplyAction="http://tempuri.org/ILibraryService/GetTransactionTypesResponse")]
-        System.Collections.Generic.List<LibraryDemo.LibraryService.TransactionType> GetTransactionTypes();
+        System.Collections.Generic.List<LibraryDemo.LibraryService.TransactionTypeDTO> GetTransactionTypes();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ILibraryService/GetTransactionTypes", ReplyAction="http://tempuri.org/ILibraryService/GetTransactionTypesResponse")]
-        System.Threading.Tasks.Task<System.Collections.Generic.List<LibraryDemo.LibraryService.TransactionType>> GetTransactionTypesAsync();
+        System.Threading.Tasks.Task<System.Collections.Generic.List<LibraryDemo.LibraryService.TransactionTypeDTO>> GetTransactionTypesAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -112,11 +112,11 @@ namespace LibraryDemo.LibraryService {
                 base(binding, remoteAddress) {
         }
         
-        public System.Collections.Generic.List<LibraryDemo.LibraryService.TransactionType> GetTransactionTypes() {
+        public System.Collections.Generic.List<LibraryDemo.LibraryService.TransactionTypeDTO> GetTransactionTypes() {
             return base.Channel.GetTransactionTypes();
         }
         
-        public System.Threading.Tasks.Task<System.Collections.Generic.List<LibraryDemo.LibraryService.TransactionType>> GetTransactionTypesAsync() {
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<LibraryDemo.LibraryService.TransactionTypeDTO>> GetTransactionTypesAsync() {
             return base.Channel.GetTransactionTypesAsync();
         }
     }

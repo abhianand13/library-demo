@@ -13,12 +13,12 @@ namespace LibraryDemo
             {
                 Mapper.Initialize(cfg =>
                 {
-                    cfg.CreateMap<TransactionType, TransactionTypeModel>();
+                    cfg.CreateMap<TransactionTypeDTO, TransactionTypeModel>();
                 });
 
                 var config = new MapperConfiguration(cfg =>
                 {
-                    cfg.CreateMap<TransactionType, TransactionTypeModel>();
+                    cfg.CreateMap<TransactionTypeDTO, TransactionTypeModel>();
                 });
                 config.AssertConfigurationIsValid();
             }

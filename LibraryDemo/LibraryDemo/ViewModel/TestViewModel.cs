@@ -47,9 +47,9 @@ namespace LibraryDemo
         private void LoadAllTransactionTypes()
         {
             LibraryServiceClient client = new LibraryServiceClient();
-            List<TransactionType> transactionTypesDTO = client.GetTransactionTypes();
+            List<TransactionTypeDTO> transactionTypesDTO = client.GetTransactionTypes();
 
-            TransactionTypes = Mapper.Map<List<TransactionType>, List<TransactionTypeModel>>(transactionTypesDTO);
+            TransactionTypes = Mapper.Map<List<TransactionTypeDTO>, List<TransactionTypeModel>>(transactionTypesDTO);
         }
     }
 }

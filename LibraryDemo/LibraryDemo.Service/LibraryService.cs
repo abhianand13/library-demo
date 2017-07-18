@@ -1,38 +1,25 @@
-﻿using LibraryDemo.DTO;
+﻿using AutoMapper;
+using LibraryDemo.DTO;
+using LibraryDemo.DAO;
 using System;
 using System.Collections.Generic;
-using System.Data.SqlClient;
+using System.Linq;
 
 namespace LibraryDemo.Service
 {
+    [AutoMapServiceBehavior]
     public class LibraryService : ILibraryService
     {
-        private const string connectionString = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=LibraryDemo;Integrated Security=True";
-
-        public List<TransactionType> GetTransactionTypes()
+        public List<TransactionTypeDTO> GetTransactionTypes()
         {
-            List<TransactionType> transactionTypes = new List<TransactionType>();
+            List<TransactionTypeDTO> transactionTypes = new List<TransactionTypeDTO>();
 
             try
             {
-                using (SqlConnection conn = new SqlConnection(connectionString))
+                using (LibraryDemoEntities context = new LibraryDemoEntities())
                 {
-                    conn.Open();
-
-                    string commandText = "SELECT * FROM LibraryTransactionType";
-                    SqlCommand cmd = new SqlCommand(commandText, conn);
-                    using (SqlDataReader reader = cmd.ExecuteReader())
-                    {
-                        while (reader.Read())
-                        {
-                            TransactionType transactionType = new TransactionType();
-                            transactionType.Code = reader["Code"].ToString();
-                            transactionType.Description = reader["Description"].ToString();
-                            transactionTypes.Add(transactionType);
-                        }
-                    }
-
-                    conn.Close();
+                    var allTransactionTypes = context.LibraryTransactionTypes.ToList();
+                    transactionTypes = Mapper.Map<List<LibraryTransactionType>, List<TransactionTypeDTO>>(allTransactionTypes);
                 }
             }
             catch (Exception ex)

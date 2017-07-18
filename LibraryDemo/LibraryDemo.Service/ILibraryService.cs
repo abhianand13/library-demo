@@ -8,6 +8,6 @@ namespace LibraryDemo.Service
     public interface ILibraryService
     {
         [OperationContract]
-        List<TransactionType> GetTransactionTypes();
+        List<TransactionTypeDTO> GetTransactionTypes();
     }
 }

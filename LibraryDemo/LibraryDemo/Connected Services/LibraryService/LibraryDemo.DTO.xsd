@@ -1,16 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/LibraryDemo.DTO" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/LibraryDemo.DTO" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:complexType name="ArrayOfTransactionType">
+  <xs:complexType name="ArrayOfTransactionTypeDTO">
     <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="TransactionType" nillable="true" type="tns:TransactionType" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TransactionTypeDTO" nillable="true" type="tns:TransactionTypeDTO" />
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="ArrayOfTransactionType" nillable="true" type="tns:ArrayOfTransactionType" />
-  <xs:complexType name="TransactionType">
+  <xs:element name="ArrayOfTransactionTypeDTO" nillable="true" type="tns:ArrayOfTransactionTypeDTO" />
+  <xs:complexType name="TransactionTypeDTO">
     <xs:sequence>
       <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="TransactionType" nillable="true" type="tns:TransactionType" />
+  <xs:element name="TransactionTypeDTO" nillable="true" type="tns:TransactionTypeDTO" />
 </xs:schema>
