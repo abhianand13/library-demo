@@ -14,6 +14,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryDemo.Service", "Libr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryDemo.DAO", "LIbraryDemo.DAO\LibraryDemo.DAO.csproj", "{921A16AA-5248-45AF-8179-AB5EF8432C15}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryDemo.Helper", "LibraryDemo.Helper\LibraryDemo.Helper.csproj", "{286BD0CC-64EA-4E43-8EDA-D473E9D0A650}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryDemo.ServiceRepository", "LibraryDemo.ServiceRepository\LibraryDemo.ServiceRepository.csproj", "{232EC557-F894-4861-BC57-186DDE7B580C}"
+	ProjectSection(ProjectDependencies) = postProject
+		{13BD10C6-8EA9-4250-B54A-4A81D0037F93} = {13BD10C6-8EA9-4250-B54A-4A81D0037F93}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,6 +43,14 @@ Global
 		{921A16AA-5248-45AF-8179-AB5EF8432C15}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{921A16AA-5248-45AF-8179-AB5EF8432C15}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{921A16AA-5248-45AF-8179-AB5EF8432C15}.Release|Any CPU.Build.0 = Release|Any CPU
+		{286BD0CC-64EA-4E43-8EDA-D473E9D0A650}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{286BD0CC-64EA-4E43-8EDA-D473E9D0A650}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{286BD0CC-64EA-4E43-8EDA-D473E9D0A650}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{286BD0CC-64EA-4E43-8EDA-D473E9D0A650}.Release|Any CPU.Build.0 = Release|Any CPU
+		{232EC557-F894-4861-BC57-186DDE7B580C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{232EC557-F894-4861-BC57-186DDE7B580C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{232EC557-F894-4861-BC57-186DDE7B580C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{232EC557-F894-4861-BC57-186DDE7B580C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

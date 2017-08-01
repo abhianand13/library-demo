@@ -7,22 +7,22 @@
       <xsd:import namespace="http://schemas.datacontract.org/2004/07/LibraryDemo.DTO" />
     </xsd:schema>
   </wsdl:types>
-  <wsdl:message name="ILibraryService_GetTransactionTypes_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetTransactionTypes" />
+  <wsdl:message name="ILibraryService_GetAllBooks_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllBooks" />
   </wsdl:message>
-  <wsdl:message name="ILibraryService_GetTransactionTypes_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetTransactionTypesResponse" />
+  <wsdl:message name="ILibraryService_GetAllBooks_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllBooksResponse" />
   </wsdl:message>
   <wsdl:portType name="ILibraryService">
-    <wsdl:operation name="GetTransactionTypes">
-      <wsdl:input wsaw:Action="http://tempuri.org/ILibraryService/GetTransactionTypes" message="tns:ILibraryService_GetTransactionTypes_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/ILibraryService/GetTransactionTypesResponse" message="tns:ILibraryService_GetTransactionTypes_OutputMessage" />
+    <wsdl:operation name="GetAllBooks">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILibraryService/GetAllBooks" message="tns:ILibraryService_GetAllBooks_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILibraryService/GetAllBooksResponse" message="tns:ILibraryService_GetAllBooks_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_ILibraryService" type="tns:ILibraryService">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <wsdl:operation name="GetTransactionTypes">
-      <soap:operation soapAction="http://tempuri.org/ILibraryService/GetTransactionTypes" style="document" />
+    <wsdl:operation name="GetAllBooks">
+      <soap:operation soapAction="http://tempuri.org/ILibraryService/GetAllBooks" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

@@ -8,25 +8,28 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace LibraryDemo.LibraryService {
+namespace LibraryDemo.ServiceRepository.LibraryService {
     using System.Runtime.Serialization;
     using System;
     
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="TransactionTypeDTO", Namespace="http://schemas.datacontract.org/2004/07/LibraryDemo.DTO")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="BookDTO", Namespace="http://schemas.datacontract.org/2004/07/LibraryDemo.DTO")]
     [System.SerializableAttribute()]
-    public partial class TransactionTypeDTO : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+    public partial class BookDTO : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
         [System.NonSerializedAttribute()]
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string CodeField;
+        private string AuthorNameField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string DescriptionField;
+        private string IsbnField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string TitleField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -39,27 +42,40 @@ namespace LibraryDemo.LibraryService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Code {
+        public string AuthorName {
             get {
-                return this.CodeField;
+                return this.AuthorNameField;
             }
             set {
-                if ((object.ReferenceEquals(this.CodeField, value) != true)) {
-                    this.CodeField = value;
-                    this.RaisePropertyChanged("Code");
+                if ((object.ReferenceEquals(this.AuthorNameField, value) != true)) {
+                    this.AuthorNameField = value;
+                    this.RaisePropertyChanged("AuthorName");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Description {
+        public string Isbn {
             get {
-                return this.DescriptionField;
+                return this.IsbnField;
             }
             set {
-                if ((object.ReferenceEquals(this.DescriptionField, value) != true)) {
-                    this.DescriptionField = value;
-                    this.RaisePropertyChanged("Description");
+                if ((object.ReferenceEquals(this.IsbnField, value) != true)) {
+                    this.IsbnField = value;
+                    this.RaisePropertyChanged("Isbn");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Title {
+            get {
+                return this.TitleField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.TitleField, value) != true)) {
+                    this.TitleField = value;
+                    this.RaisePropertyChanged("Title");
                 }
             }
         }
@@ -78,20 +94,20 @@ namespace LibraryDemo.LibraryService {
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="LibraryService.ILibraryService")]
     public interface ILibraryService {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ILibraryService/GetTransactionTypes", ReplyAction="http://tempuri.org/ILibraryService/GetTransactionTypesResponse")]
-        System.Collections.Generic.List<LibraryDemo.LibraryService.TransactionTypeDTO> GetTransactionTypes();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ILibraryService/GetAllBooks", ReplyAction="http://tempuri.org/ILibraryService/GetAllBooksResponse")]
+        System.Collections.Generic.List<LibraryDemo.ServiceRepository.LibraryService.BookDTO> GetAllBooks();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ILibraryService/GetTransactionTypes", ReplyAction="http://tempuri.org/ILibraryService/GetTransactionTypesResponse")]
-        System.Threading.Tasks.Task<System.Collections.Generic.List<LibraryDemo.LibraryService.TransactionTypeDTO>> GetTransactionTypesAsync();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ILibraryService/GetAllBooks", ReplyAction="http://tempuri.org/ILibraryService/GetAllBooksResponse")]
+        System.Threading.Tasks.Task<System.Collections.Generic.List<LibraryDemo.ServiceRepository.LibraryService.BookDTO>> GetAllBooksAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface ILibraryServiceChannel : LibraryDemo.LibraryService.ILibraryService, System.ServiceModel.IClientChannel {
+    public interface ILibraryServiceChannel : LibraryDemo.ServiceRepository.LibraryService.ILibraryService, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class LibraryServiceClient : System.ServiceModel.ClientBase<LibraryDemo.LibraryService.ILibraryService>, LibraryDemo.LibraryService.ILibraryService {
+    public partial class LibraryServiceClient : System.ServiceModel.ClientBase<LibraryDemo.ServiceRepository.LibraryService.ILibraryService>, LibraryDemo.ServiceRepository.LibraryService.ILibraryService {
         
         public LibraryServiceClient() {
         }
@@ -112,12 +128,12 @@ namespace LibraryDemo.LibraryService {
                 base(binding, remoteAddress) {
         }
         
-        public System.Collections.Generic.List<LibraryDemo.LibraryService.TransactionTypeDTO> GetTransactionTypes() {
-            return base.Channel.GetTransactionTypes();
+        public System.Collections.Generic.List<LibraryDemo.ServiceRepository.LibraryService.BookDTO> GetAllBooks() {
+            return base.Channel.GetAllBooks();
         }
         
-        public System.Threading.Tasks.Task<System.Collections.Generic.List<LibraryDemo.LibraryService.TransactionTypeDTO>> GetTransactionTypesAsync() {
-            return base.Channel.GetTransactionTypesAsync();
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<LibraryDemo.ServiceRepository.LibraryService.BookDTO>> GetAllBooksAsync() {
+            return base.Channel.GetAllBooksAsync();
         }
     }
 }

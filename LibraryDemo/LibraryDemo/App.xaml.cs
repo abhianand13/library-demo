@@ -7,9 +7,11 @@ namespace LibraryDemo
     /// </summary>
     public partial class App : Application
     {
-        private void Application_Startup(object sender, StartupEventArgs e)
+        protected override void OnStartup(StartupEventArgs e)
         {
-            Bootstrapper.ConfigureAutoMapping();
+            base.OnStartup(e);
+            Bootstrapper bootstrapper = new Bootstrapper();
+            bootstrapper.Run();
         }
     }
 }

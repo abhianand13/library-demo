@@ -1,5 +1,4 @@
-﻿using AutoMapper;
-using LibraryDemo.DTO;
+﻿using LibraryDemo.DTO;
 using LibraryDemo.DAO;
 using System;
 using System.Collections.Generic;
@@ -10,16 +9,24 @@ namespace LibraryDemo.Service
     [AutoMapServiceBehavior]
     public class LibraryService : ILibraryService
     {
-        public List<TransactionTypeDTO> GetTransactionTypes()
+        public List<BookDTO> GetAllBooks()
         {
-            List<TransactionTypeDTO> transactionTypes = new List<TransactionTypeDTO>();
+            List<BookDTO> booksList = new List<BookDTO>();
 
             try
             {
                 using (LibraryDemoEntities context = new LibraryDemoEntities())
                 {
-                    var allTransactionTypes = context.LibraryTransactionTypes.ToList();
-                    transactionTypes = Mapper.Map<List<LibraryTransactionType>, List<TransactionTypeDTO>>(allTransactionTypes);
+                    var allBooks = context.Books.Where(x => x.IsActive).ToList();
+                    
+                    foreach (var book in allBooks)
+                    {
+                        BookDTO bookDTO = new BookDTO();
+                        bookDTO.Isbn = book.Isbn.Trim();
+                        bookDTO.Title = book.Title.Trim();
+                        bookDTO.AuthorName = book.Author.Name.Trim();
+                        booksList.Add(bookDTO);
+                    }
                 }
             }
             catch (Exception ex)
@@ -27,7 +34,7 @@ namespace LibraryDemo.Service
                 // TODO - Implement logging
             }
 
-            return transactionTypes;
+            return booksList;
         }
     }
 }
